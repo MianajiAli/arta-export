@@ -15,8 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa">
       <body className={inter.className} >
-        <div className='font-medium bg-back flex flex-col'>
-
+        <div className='font-medium bg-back flex flex-col relative'>
           <Header />
 
           {children}

@@ -10,3 +10,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+h1 {
+  @apply text-5xl font-bold
+}
+
+h2 {
+  @apply text-4xl font-semibold
+}

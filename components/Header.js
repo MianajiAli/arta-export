@@ -72,11 +72,11 @@ export default function Page() {
     };
 
     return (
-        <header className="w-full bg-back2">
+        <header className="w-full bg-back2 z-10">
             <div className="font-bold w-full h-12 bg-primary text-black text-center flex justify-center items-center">
                 صادرات کالا به کشور های همسایه
             </div>
-            <nav className="w-full h-20 flex justify-center items-center">
+            <nav className="w-full h-20 flex justify-center items-center sticky">
                 {renderLinks()}
             </nav>
         </header>
