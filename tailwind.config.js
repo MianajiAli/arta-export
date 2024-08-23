@@ -15,11 +15,17 @@ module.exports = {
           DEFAULT: '#808080', // Orange color as the primary color
         },
         back: {
-          DEFAULT: '#fff', // Orange color as the primary color
+          DEFAULT: '#F7F7F7', // Orange color as the primary color
         },
         back2: {
           DEFAULT: '#E5E4E2', // Orange color as the primary color
         },
+        back3: {
+          DEFAULT: '#fff', // Orange color as the primary color
+        },
+        text1: '#212529',
+        text2: '#959595',
+        link: "#6c757d",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

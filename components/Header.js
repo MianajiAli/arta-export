@@ -5,15 +5,16 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const links = [
-    { label: "Home", url: "/" },
-    { label: "Shop", url: "/shop" },
+    { label: "خانه", url: "/" },
     {
-        label: "Products",
+        label: "محصولات",
         children: [
-            { label: "Knife", url: "/products/knife" },
-            { label: "Fork", url: "/products/fork" },
+            { label: "چاقو", url: "/products/knife" },
+            { label: "مس", url: "/products/fork" },
+            { label: "ضرف مس", url: "/products/fork" },
         ]
-    }
+    },
+    { label: "درباره ما", url: "/about-us" },
 ];
 
 export default function Page() {
@@ -21,11 +22,11 @@ export default function Page() {
     const pathname = usePathname();
 
     // Helper function to check if a link is active
-    const isActive = (url) => pathname === url ? 'bg-blue-500 text-white' : 'text-black';
+    const isActive = (url) => pathname === url ? 'bg-primary font-bold ' : 'text-black';
 
     // Helper function to check if any child link is active
     const isParentActive = (children) => {
-        return children.some(child => pathname === child.url) ? 'bg-blue-500 text-white' : 'text-black';
+        return children.some(child => pathname === child.url) ? 'bg-primary font-bold ' : 'text-black';
     };
 
     const renderLinks = () => {
@@ -34,7 +35,7 @@ export default function Page() {
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
-                className="relative mr-4"
+                className="relative"
             >
                 {link.children ? (
                     <>
@@ -44,9 +45,9 @@ export default function Page() {
                             {link.label}
                         </span>
                         {open === index && (
-                            <div className="absolute top-full left-0 bg-white shadow-lg">
+                            <div className="absolute top-full right-0 bg-white shadow-lg">
                                 {link.children.map((child, childIndex) => (
-                                    <Link key={childIndex} href={child.url} className={`block px-4 py-2 ${isActive(child.url)} hover:bg-blue-600`}>
+                                    <Link key={childIndex} href={child.url} className={`block min-w-24 py-2 ${isActive(child.url)} hover:bg-primary hover:text-white`}>
                                         {child.label}
 
                                     </Link>
@@ -55,7 +56,7 @@ export default function Page() {
                         )}
                     </>
                 ) : (
-                    <Link href={link.url} className={`text-black ${isActive(link.url)}`}>
+                    <Link href={link.url} className={`text-text1 ${isActive(link.url)}`}>
                         {link.label}
                     </Link>
                 )}
@@ -73,12 +74,16 @@ export default function Page() {
 
     return (
         <header className="w-full bg-back2 z-10">
-            <div className="font-bold w-full h-12 bg-primary text-black text-center flex justify-center items-center">
+            <div className="font-bold w-full h-12 bg-primary text-text1 text-center flex justify-center items-center">
                 صادرات کالا به کشور های همسایه
             </div>
-            <nav className="w-full h-20 flex justify-center items-center sticky">
-                {renderLinks()}
+            <nav className="w-full h-20 flex justify-between px-[10%] items-center" dir="rtl">
+                <div className="flex justify-center items-center gap-5">
+                    <span className=" text-2xl md:text-4xl font-bold text-text1">آرتا اکسپورت</span>
+                    {renderLinks()}</div>
+                <div></div>
             </nav>
+
         </header>
     );
 }
