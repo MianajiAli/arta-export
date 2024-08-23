@@ -14,6 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa">
+      <meta name="robots" content="noindex,nofollow" />
       <body className={inter.className} >
         <div className='font-medium bg-back flex flex-col relative'>
           <Header />
