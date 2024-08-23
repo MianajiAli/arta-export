@@ -9,7 +9,7 @@ const About = () => {
             <div className="w-full flex gap-5 justify-center items-center flex-wrap  mt-5">
                 <ServiceCard
                     Icon={AiFillDingtalkCircle}
-                    description="توضیحات مربوط به این سرویس خاص در اینجا قرار می‌گیرد."
+                    description="توضیحات مربوط به این سرویس خاص"
                 />
                 <ServiceCard
                     Icon={AiFillCustomerService}
