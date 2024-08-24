@@ -47,7 +47,7 @@ export default function Page() {
                         {open === index && (
                             <div className="absolute  right-0 pt-3 rounded-xl bg-white shadow-lg">
                                 {link.children.map((child, childIndex) => (
-                                    <Link key={childIndex} href={child.url} className={`block min-w-24 py-2 px-2 ${isActive(child.url)} hover:bg-primary hover:text-white`}>
+                                    <Link key={childIndex} href={child.url} className={`block rounded-lg min-w-24 py-2 px-2 ${isActive(child.url)} hover:bg-primary hover:text-white`}>
                                         {child.label}
 
                                     </Link>

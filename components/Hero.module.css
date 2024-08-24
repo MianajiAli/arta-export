@@ -1,0 +1,67 @@
+/* Add this CSS to your global styles or in a relevant CSS/SCSS file */
+
+/* Keyframes for sliding animation */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Add transitions for entering and exiting images */
+.image-enter {
+    animation: slideInFromRight 0.5s forwards;
+}
+
+.image-exit {
+    animation: slideOutToLeft 0.5s forwards;
+}
+
+.image-prev-enter {
+    animation: slideInFromLeft 0.5s forwards;
+}
+
+.image-prev-exit {
+    animation: slideOutToRight 0.5s forwards;
+}
