@@ -1,12 +1,16 @@
 "use client"
+// app/page.js
 import React, { useEffect, useState } from 'react';
 import ProductCard from '@/components/ProductCard';
+import Modal from '@/components/Modal';
 import { fetchProducts } from '@/lib/api';
 
 export default function Page() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         const loadProducts = async () => {
@@ -23,6 +27,16 @@ export default function Page() {
         loadProducts();
     }, []);
 
+    const handleCardClick = (product) => {
+        setSelectedProduct(product);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setSelectedProduct(null);
+    };
+
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
 
@@ -34,10 +48,15 @@ export default function Page() {
                     <div>No products available</div>
                 ) : (
                     products.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} onClick={handleCardClick} />
                     ))
                 )}
             </div>
+            <Modal
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+                product={selectedProduct}
+            />
         </div>
     );
 }

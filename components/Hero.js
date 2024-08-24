@@ -32,7 +32,7 @@ const Hero = () => {
 
     return (
         <div className="w-full relative items-center gap-10">
-            <div className='w-full h-[400px] relative'>
+            <div className='w-full h-[100px] md:h-[400px] relative'>
                 <Image
                     src={images[currentIndex]}
                     alt="Cargo Image"

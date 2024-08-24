@@ -1,14 +1,15 @@
 "use client";
 import React, { useState } from 'react';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onClick }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div
-            className="w-60 h-80 bg-back2 rounded-xl"
+            className="w-60 h-80 bg-back2 rounded-xl cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={() => onClick(product)}
         >
             <div className="w-full aspect-square p-3">
                 <img
