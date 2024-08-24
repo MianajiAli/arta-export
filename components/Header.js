@@ -56,7 +56,7 @@ export default function Page() {
                         )}
                     </>
                 ) : (
-                    <Link href={link.url} className={`text-text1 ${isActive(link.url)}`}>
+                    <Link href={link.url} className={`text-text1  ${isActive(link.url)}`}>
                         {link.label}
                     </Link>
                 )}
@@ -78,7 +78,7 @@ export default function Page() {
                 صادرات کالا به کشور های همسایه
             </div>
             <nav className="w-full h-20 flex justify-between px-[10%] items-center" dir="rtl">
-                <div className="flex justify-center items-center gap-5">
+                <div className="flex justify-center items-center gap-10">
                     <span className=" text-2xl md:text-4xl font-bold text-text1">آرتا اکسپورت</span>
                     {renderLinks()}</div>
                 <div></div>

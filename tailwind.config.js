@@ -25,6 +25,7 @@ module.exports = {
         },
         text1: '#212529',
         text2: '#959595',
+        text3: '#f1c40f',
         link: "#6c757d",
       },
       backgroundImage: {
