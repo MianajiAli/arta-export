@@ -1,0 +1,13 @@
+.footer-link {
+    color: inherit;
+    /* Inherit color from parent */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.footer-link:hover {
+    @apply text-text1;
+    /* Replace with your desired hover color */
+    text-decoration: underline;
+    /* Optional: underline on hover */
+}
