@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-    "/images/cargo-image.jpg",
-    "/images/cargo-image2.jpg",
+    "/images/08.webp",
+    "/images/03.webp",
     "/images/cargo-image3.png",
 ];
 
@@ -41,7 +41,7 @@ const Hero = () => {
                     style={{ objectFit: 'cover' }}
                     className="z-1 absolute"
                 />
-                <div className="z-2 w-full h-full absolute bg-black opacity-45"></div>
+                {/* <div className="z-2 w-full h-full absolute bg-black opacity-45"></div> */}
                 <div className="z-3 absolute w-full h-full flex justify-center items-center">
                     {/* <h1 className="mt-24 text-white rounded-lg p-3">
                     </h1> */}
