@@ -11,7 +11,18 @@ export default function Page() {
     return (
         <div>
             <h1>Product Showcase</h1>
-            <ProductCard product={sampleProduct} />
+            <div className=" mx-auto w-10/12 flex flex-wrap justify-center gap-5 items-start">
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+                <ProductCard product={sampleProduct} />
+            </div>
         </div>
     );
 }

@@ -7,8 +7,11 @@ const ProductCard = ({ product }) => {
 
                 <img src={product.image} alt={product.name} className="w-full h-full rounded-lg" />
             </div>
-            <span className="text-xl">{product.name}</span>
-            <p className="product-price">${product.price.toFixed(2)}</p>
+            <div className="px-3 pb-3 text-text1">
+
+                <span className="text-xl">{product.name}</span>
+                <p className="product-price">${product.price.toFixed(2)}</p>
+            </div>
         </div>
     );
 };
