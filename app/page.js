@@ -8,6 +8,7 @@ export default function Page() {
       <Service />
       <div className="w-full px-[10%]" dir="rtl">
         <h2 className="text-text1">کار ما</h2>
+        <p></p>
       </div>
       <Footer />
     </div>
