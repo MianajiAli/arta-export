@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "قابلمه مسی",
-    "description": "Description of Product 1",
+    "description": "قابلمه‌ای سنتی مناسب پخت انواع غذاها.",
     "images": [
       "/images/products/coper/1/1_1.jpg",
       "/images/products/coper/1/1_2.jpg",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "name": "ماهیتابه مسی",
-    "description": "Description of Product 2",
+    "description": "ماهیتابه‌ای مسی با انتقال حرارت عالی.",
     "images": [
       "/images/products/coper/2/2_11.jpg",
       "/images/products/coper/2/2_12.jpg",
@@ -23,7 +23,7 @@
   {
     "id": 3,
     "name": "ماهیتابه",
-    "description": "Description of Product 3",
+    "description": "ماهیتابه‌ای همه‌کاره با پخش حرارت یکنواخت.",
     "images": [
       "/images/products/coper/3/3_1.jpg",
       "/images/products/coper/3/3_2.jpg",
@@ -34,7 +34,7 @@
   {
     "id": 4,
     "name": "پیاله مسی",
-    "description": "Description of Product 4",
+    "description": "پیاله‌ای زیبا برای سرو انواع خوراکی‌ها.",
     "images": [
       "/images/products/coper/4/4_1.jpg",
       "/images/products/coper/4/4_2.jpg",
@@ -44,7 +44,7 @@
   {
     "id": 5,
     "name": "کاسه مسی",
-    "description": "Description of Product 5",
+    "description": "کاسه‌ای مسی مناسب سرو یا مخلوط کردن مواد.",
     "images": [
       "/images/products/coper/5/5_27.jpg",
       "/images/products/coper/5/5_29.jpg"
@@ -53,7 +53,7 @@
   {
     "id": 6,
     "name": "قندان سیب مسی",
-    "description": "Description of Product 6",
+    "description": "قندان سیبی مسی، زیبا و کاربردی.",
     "images": [
       "/images/products/coper/6/6_01.jpg",
       "/images/products/coper/6/6_02.jpg",
@@ -65,7 +65,7 @@
   {
     "id": 7,
     "name": "کتری مسی",
-    "description": "Description of Product 7",
+    "description": "کتری مسی مناسب جوشاندن آب.",
     "images": [
       "/images/products/coper/7/7_1.jpg",
       "/images/products/coper/7/7_2.jpg",
@@ -77,7 +77,7 @@
   {
     "id": 8,
     "name": "سرویس قابلمه مسی",
-    "description": "Description of Product 8",
+    "description": "سرویس کامل قابلمه مسی برای آشپزی.",
     "images": [
       "/images/products/coper/8/8_2.jpg",
       "/images/products/coper/8/8_3.jpg",
