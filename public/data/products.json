@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "قابلمه مسی",
     "description": "Description of Product 1",
     "images": [
       "/images/products/coper/1/1_1.jpg",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "name": "Product 2",
+    "name": "ماهیتابه مسی",
     "description": "Description of Product 2",
     "images": [
       "/images/products/coper/2/2_11.jpg",
@@ -22,7 +22,7 @@
   },
   {
     "id": 3,
-    "name": "Product 3",
+    "name": "ماهیتابه",
     "description": "Description of Product 3",
     "images": [
       "/images/products/coper/3/3_1.jpg",
@@ -33,7 +33,7 @@
   },
   {
     "id": 4,
-    "name": "Product 4",
+    "name": "پیاله مسی",
     "description": "Description of Product 4",
     "images": [
       "/images/products/coper/4/4_1.jpg",
@@ -43,7 +43,7 @@
   },
   {
     "id": 5,
-    "name": "Product 5",
+    "name": "کاسه مسی",
     "description": "Description of Product 5",
     "images": [
       "/images/products/coper/5/5_27.jpg",
@@ -52,7 +52,7 @@
   },
   {
     "id": 6,
-    "name": "Product 6",
+    "name": "قندان سیب مسی",
     "description": "Description of Product 6",
     "images": [
       "/images/products/coper/6/6_01.jpg",
@@ -64,7 +64,7 @@
   },
   {
     "id": 7,
-    "name": "Product 7",
+    "name": "کتری مسی",
     "description": "Description of Product 7",
     "images": [
       "/images/products/coper/7/7_1.jpg",
@@ -76,7 +76,7 @@
   },
   {
     "id": 8,
-    "name": "Product 8",
+    "name": "سرویس قابلمه مسی",
     "description": "Description of Product 8",
     "images": [
       "/images/products/coper/8/8_2.jpg",

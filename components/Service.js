@@ -18,7 +18,7 @@ const About = () => {
                 />
                 <ServiceCard
                     Icon={GiCargoShip}
-                    description="کالا واردات"
+                    description="واردات کالا"
                 />
                 <ServiceCard
                     Icon={GiWoodenCrate}

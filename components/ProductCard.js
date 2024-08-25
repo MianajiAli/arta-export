@@ -6,7 +6,7 @@ const ProductCard = ({ product, onClick }) => {
 
     return (
         <div
-            className="w-60 h-80 bg-back2 rounded-xl cursor-pointer"
+            className="w-60 h-80 border-[2px] bg-white border-text2 text-text2 rounded-xl cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => onClick(product)}
@@ -18,7 +18,7 @@ const ProductCard = ({ product, onClick }) => {
                     className="w-full h-full rounded-lg"
                 />
             </div>
-            <div className="px-3 pb-3 text-text1">
+            <div className="px-3 pb-3 text-text1" dir="rtl">
                 <span className="text-xl font-bold">{product.name}</span>
                 <p className="text-sm mt-1">{product.description}</p>
             </div>
