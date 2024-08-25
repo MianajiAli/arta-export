@@ -1,5 +1,6 @@
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import './Footer.css'; // Import the CSS file
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -53,8 +54,17 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
+
             <div className="bg-primary text-text1 py-4 text-center mt-8">
-                <p>&copy; 2024 T-Express. کلیه حقوق محفوظ است.</p>
+                <p dir='ltr' >&copy; 2024 Arta-export کلیه حقوق محفوظ است.</p>
+            </div>
+            <div className="bg-text1/90 text-white/70 py-1 text-center ">
+                <p >طراحی شده توسط
+                    <Link href="https://github.com/aidinkahali"> Aydin Kahali </Link>
+                    و
+                    <Link href="https://alimianaji.ir"> Ali Mianaji </Link>
+
+                </p>
             </div>
         </footer>
     );

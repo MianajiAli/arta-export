@@ -8,7 +8,7 @@ const categories = {
 
 export default function Page() {
     return (
-        <div className="w-full  flex justify-center items-start  border border-text1 p-5 rounded-md">
+        <div className="  flex justify-center items-start  border border-text1 p-5 rounded-md">
             <ul dir="rtl">
                 {Object.entries(categories).map(([category, items]) => (
                     <li className="text-text1" key={category}>

@@ -29,7 +29,7 @@ const RandomProductGrid = () => {
     return (
         <div className="w-full px-[10%]" dir="rtl">
             <div className="flex justify-between items-center">
-                <h2 className="text-text1 ">برخی از محصولات</h2>
+                <h2 className="text-text1 "> برخی از محصولات صادراتی</h2>
                 <Link href="/products" >
                     <p className="text-text2">دیدن همه</p>
                 </Link>

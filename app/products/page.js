@@ -44,9 +44,9 @@ export default function Page() {
     return (
         <>
             <h2 className="w-full p-10 text-center text-text1">ظروف مسی</h2>
-            <div className="flex  ">
+            <div className="flex flex-col-reverse md:flex-row  ">
 
-                <div className="w-10/12">
+                <div className="w-10/12 mx-auto md:mx-0">
                     <div className="mx-auto w-10/12 flex flex-wrap justify-center gap-5 items-start">
                         {products.length === 0 ? (
                             <div>No products available</div>
@@ -62,7 +62,7 @@ export default function Page() {
                         product={selectedProduct}
                     />
                 </div>
-                <div>
+                <div className="w-10/12 mx-auto md:mx-0 md:w-2/12  my-10 px-20 md:px-5">
                     <SideBar></SideBar>
                 </div>
             </div>

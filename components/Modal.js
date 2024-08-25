@@ -29,7 +29,6 @@ const Modal = ({ isOpen, onClose, product }) => {
     return (
         <div dir="rtl" className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
 
-
             <div
                 ref={modalRef}
                 className="bg-white text-text1 p-4 rounded-lg max-w-lg w-full relative"
