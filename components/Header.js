@@ -8,11 +8,7 @@ const links = [
     { label: "خانه", url: "/" },
     {
         label: "محصولات",
-        children: [
-            { label: "چاقو", url: "/products/knife" },
-            { label: "مس", url: "/products/fork" },
-            { label: "ضرف مس", url: "/products/fork" },
-        ]
+        url: "/products"
     },
     { label: "درباره ما", url: "/about-us" },
 ];

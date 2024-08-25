@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '@/components/ProductCard';
 import Modal from '@/components/Modal';
+import SideBar from '@/components/SideBar';
 import { fetchProducts } from '@/lib/api';
 
 export default function Page() {
@@ -41,22 +42,30 @@ export default function Page() {
     if (error) return <div>Error: {error.message}</div>;
 
     return (
-        <div>
-            <h1>Product Showcase</h1>
-            <div className="mx-auto w-10/12 flex flex-wrap justify-center gap-5 items-start">
-                {products.length === 0 ? (
-                    <div>No products available</div>
-                ) : (
-                    products.map((product) => (
-                        <ProductCard key={product.id} product={product} onClick={handleCardClick} />
-                    ))
-                )}
+        <>
+            <h2 className="w-full p-10 text-center text-text1">ظروف مسی</h2>
+            <div className="flex  ">
+
+                <div className="w-10/12">
+                    <div className="mx-auto w-10/12 flex flex-wrap justify-center gap-5 items-start">
+                        {products.length === 0 ? (
+                            <div>No products available</div>
+                        ) : (
+                            products.map((product) => (
+                                <ProductCard key={product.id} product={product} onClick={handleCardClick} />
+                            ))
+                        )}
+                    </div>
+                    <Modal
+                        isOpen={isModalOpen}
+                        onClose={handleCloseModal}
+                        product={selectedProduct}
+                    />
+                </div>
+                <div>
+                    <SideBar></SideBar>
+                </div>
             </div>
-            <Modal
-                isOpen={isModalOpen}
-                onClose={handleCloseModal}
-                product={selectedProduct}
-            />
-        </div>
+        </>
     );
 }

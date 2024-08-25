@@ -1,52 +1,65 @@
 // components/Modal.js
-import React, { useEffect, useRef } from 'react';
+"use client"
+import React, { useEffect, useRef, useState } from 'react';
 
 const Modal = ({ isOpen, onClose, product }) => {
     const modalRef = useRef();
+    const [selected, setSelected] = useState(0);
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (modalRef.current && !modalRef.current.contains(event.target)) {
-                onClose();
-            }
-        };
-
+        // Reset the selected image index to 0 whenever the modal is opened
         if (isOpen) {
+            setSelected(0);
             document.addEventListener('mousedown', handleClickOutside);
-            return () => document.removeEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
         }
-    }, [isOpen, onClose]);
+
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [isOpen]);
+
+    const handleClickOutside = (event) => {
+        if (modalRef.current && !modalRef.current.contains(event.target)) {
+            onClose();
+        }
+    };
 
     if (!isOpen || !product) return null;
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div dir="rtl" className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+
+
             <div
                 ref={modalRef}
-                className="bg-white p-4 rounded-lg max-w-lg w-full relative"
+                className="bg-white text-text1 p-4 rounded-lg max-w-lg w-full relative"
                 role="dialog"
                 aria-labelledby="modal-title"
                 aria-describedby="modal-description"
             >
-                <button
-                    className="absolute top-2 right-2 text-xl"
-                    onClick={onClose}
-                    aria-label="Close modal"
-                >
-                    &times;
-                </button>
-                <h2 id="modal-title" className="text-xl font-bold">{product.name}</h2>
-                <img src={product.mainImage} alt={product.name} className="w-full h-auto mt-2" />
-                <div className="mt-4" id="modal-description">
-                    <p>{product.description}</p>
-                    <div className="mt-4">
-                        <h3 className="text-lg font-semibold">Additional Images:</h3>
-                        <div className="flex gap-2 mt-2">
-                            {product.images.map((img, idx) => (
-                                <img key={idx} src={img} alt={`Additional ${idx}`} className="w-20 h-20 object-cover" />
-                            ))}
-                        </div>
+                <div className="w-full flex gap-5">
+                    <div>
+
+                        <h2 id="modal-title" className="text-2xl mt-10 mb-2 font-bold">{product.name}</h2>
+                        <p>{product.description}</p>
                     </div>
+                    <img src={product.images[selected]} alt={product.name} className="w-52 h-auto aspect-square rounded-md bg-gray-100 flex justify-center items-center object-cover mt-2" />
+
+                </div>
+                <div className="mt-4">
+
+                    <div className="flex gap-2 mt-2">
+                        {product.images.map((img, idx) => (
+                            <img
+                                key={idx}
+                                onClick={() => setSelected(idx)}
+                                src={img}
+                                alt={`Additional ${idx}`}
+                                className={`w-20 h-20 object-cover cursor-pointer ${selected === idx ? 'border-2 border-blue-500' : ''}`}
+                            />
+                        ))}
+                    </div>
+
                 </div>
             </div>
         </div>
