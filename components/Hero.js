@@ -32,7 +32,7 @@ const Hero = () => {
 
     return (
         <div className="w-full relative items-center gap-10">
-            <div className='w-full h-[100px] md:h-[400px] relative'>
+            <div className='w-full h-[130px] md:h-[400px] relative'>
                 <Image
                     src={images[currentIndex]}
                     alt="Cargo Image"
@@ -49,12 +49,12 @@ const Hero = () => {
 
                 {/* Navigation Buttons */}
                 <div className="absolute top-1/2 transform -translate-y-1/2 left-4 z-10">
-                    <button onClick={prevImage} className="text-white bg-black/50 rounded-full p-2">
+                    <button onClick={prevImage} className="text-white bg-black/30 rounded-full p-2">
                         &#10094; {/* Left Arrow */}
                     </button>
                 </div>
                 <div className="absolute top-1/2 transform -translate-y-1/2 right-4 z-10">
-                    <button onClick={nextImage} className="text-white bg-black/50 rounded-full p-2">
+                    <button onClick={nextImage} className="text-white bg-black/30 rounded-full p-2">
                         &#10095; {/* Right Arrow */}
                     </button>
                 </div>

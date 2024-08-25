@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const ProductCard = ({ product, onClick }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -12,10 +13,13 @@ const ProductCard = ({ product, onClick }) => {
             onClick={() => onClick(product)}
         >
             <div className="w-full aspect-square p-3">
-                <img
+                <Image
                     src={isHovered && product.images[1] ? product.images[1] : product.images[0]}
                     alt={product.name}
-                    className="w-full h-full rounded-lg"
+                    width={240} // Replace with your image width
+                    height={240} // Replace with your image height
+                    className="w-full h-full rounded-lg object-cover"
+                    priority={true} // Add this line if the image is above the fold
                 />
             </div>
             <div className="px-3 pb-3 text-text1" dir="rtl">
