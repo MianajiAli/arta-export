@@ -53,8 +53,8 @@ const ExportProcess = () => {
                     <li key={index} className="w-68  p-4 border rounded-lg shadow-md">
                         <div className="flex items-center mb-2">
                             <span className="text-3xl ml-2">{step.icon}</span>
-                            <span className="text-2xl text-primary">{index + 1}.</span>
-                            <h3 className="text-text1 text-lg font-semibold">{step.title}</h3>
+                            <span className="text-2xl text-primary/70">{index + 1}.</span>
+                            <h3 className="text-text1/80 text-lg font-semibold">{step.title}</h3>
                         </div>
                         <p className="text-text2 w-64">{step.description}</p>
                     </li>
