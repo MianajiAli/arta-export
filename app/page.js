@@ -9,10 +9,10 @@ import GlobalReach from '@/components/GlobalReach';
 
 export default function Page() {
   return (
-    <div className="w-full flex flex-col gap-10">
+    <div className="w-full flex flex-col gap-10 ">
       <Hero />
       <Service />
-      <GlobalReach/>
+      <GlobalReach />
       <ExportProcess></ExportProcess>
       <RandomProductGrid />
       <PhoneNumber />

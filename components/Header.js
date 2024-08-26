@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaShoppingCart } from "react-icons/fa"; 
 import { useState } from "react";
-import { HiMenu, HiX } from "react-icons/hi"; // آیکون‌های منوی همبرگری
+import { HiMenu } from "react-icons/hi";
+import { FaShoppingCart } from "react-icons/fa";
+import HeaderModal from "./HeaderModal"; // Import the HeaderModal component
 
 const links = [
     { label: "خانه", url: "/" },
     { label: "محصولات", url: "/products" },
-    { label: "مقالات", url: "/articles" }, 
+    { label: "مقالات", url: "/articles" },
     { label: "درباره ما", url: "/about-us" },
     { label: "تماس با ما", url: "/contact" },
 ];
@@ -18,48 +19,49 @@ export default function Navbar() {
     const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const isActive = (url) => (pathname === url ? 'text-primary font-bold' : 'text-gray-800');
-
-    const renderLinks = () => {
-        return links.map((link, index) => (
-            <Link key={index} href={link.url}>
-                <span className={`block px-4 py-2 ${isActive(link.url)} hover:text-primary cursor-pointer`}>
-                    {link.label}
-                </span>
-            </Link>
-        ));
-    };
+    const isActive = (url) => (pathname === url ? 'underline !text-text1' : '');
 
     return (
-        <header className="w-full bg-gray-100 shadow-md z-10">
-            {/* نوار اطلاع‌رسانی بالا */}
-            <div className="bg-primary text-white text-center py-2 text-xs sm:text-sm md:text-base lg:text-lg">
-                صادرات کالا به کشورهای همسایه
-            </div>
+        <header className="bg-gray-100 shadow-md fixed w-full z-20">
+            <nav className="w-10/12 mx-auto flex justify-between items-center p-4" dir="rtl">
+                <span className="text-2xl font-bold text-primary ">آرتا اکسپورت</span>
 
-            {/* نوار ناوبری اصلی */}
-            <nav className="container mx-auto px-3  lg:px-10 h-16 md:h-20 flex justify-between items-center" dir="rtl">
-                {/* برندینگ و منوی همبرگری */}
-                <div className="flex items-center justify-between w-full md:w-auto">
-                    {/* نام شرکت */}
-                    <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-primary">آرتا اکسپورت</span>
-                    {/* دکمه منوی همبرگری برای موبایل و تبلت */}
-                    <div className="lg:hidden">
-                        <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl text-gray-800">
-                            {menuOpen ? <HiX /> : <HiMenu />} {/* نمایش منوی همبرگری یا ایکس */}
-                        </button>
-                    </div>
+                {/* دکمه منوی همبرگری */}
+                <button onClick={() => setMenuOpen(true)} className="text-2xl text-text1 lg:hidden">
+                    <HiMenu />
+                </button>
+
+                {/* منوی لینک‌ها برای دسکتاپ */}
+                <div className={`hidden lg:flex items-center`}>
+                    {links.map((link, index) => (
+                        <Link key={index} href={link.url}>
+                            <span className={`block p-2 ${isActive(link.url)} text-text2 hover:text-text1`}>
+                                {link.label}
+                            </span>
+                        </Link>
+                    ))}
                 </div>
 
-                {/* منوی لینک‌ها و دکمه خرید */}
-                <div className={`mt-4 md:mt-0 flex-col md:flex-row flex items-center gap-5 ${menuOpen ? 'block' : 'hidden'} w-full md:w-auto md:flex md:items-center`}>
-                    {renderLinks()}
-                    <Link href="/buy" className="bg-green-500 text-white  rounded-lg flex items-center hover:bg-green-600 transition-colors duration-300 shadow-lg hover:shadow-xl">
-                        <FaShoppingCart className="ml-2" />
-                        خرید محصول
-                    </Link>
-                </div>
+                <Link href="/buy" className="hidden lg:flex items-center bg-green-200 text-green-600 p-2 rounded-lg">
+                    <FaShoppingCart className="ml-2" />
+                    خرید محصول
+                </Link>
             </nav>
+
+            {/* HeaderModal component for mobile menu */}
+            <HeaderModal isOpen={menuOpen} onClose={() => setMenuOpen(false)}>
+                {links.map((link, index) => (
+                    <Link key={index} href={link.url}>
+                        <span className={`block p-2 ${isActive(link.url)} text-text2 hover:text-text1`}>
+                            {link.label}
+                        </span>
+                    </Link>
+                ))}
+                <Link href="/buy" className="flex items-center bg-green-200 text-green-600 p-2 rounded-lg mt-4">
+                    <FaShoppingCart className="ml-2" />
+                    خرید محصول
+                </Link>
+            </HeaderModal>
         </header>
     );
 }

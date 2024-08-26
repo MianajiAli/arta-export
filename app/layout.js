@@ -17,10 +17,12 @@ export default function RootLayout({ children }) {
     <html lang="fa">
       <meta name="robots" content="noindex,nofollow" />
       <body className={inter.className} >
-        <div className='font-medium bg-back min-h-screen  flex flex-col relative'>
+        <div className='font-medium bg-back min-h-screen  flex flex-col relative '>
           <Header />
+          <div className="pt-20">
 
-          {children}
+            {children}
+          </div>
         </div>
 
         <Footer />
