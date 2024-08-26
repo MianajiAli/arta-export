@@ -4,7 +4,7 @@ import ServiceCard from './ServiceCard';  // Import the ServiceCard component
 const About = () => {
     return (
         <div className="px-[10%] flex flex-col gap-3" dir="rtl">
-            <h2 className="text-text1">خدمات ما</h2>
+            <h2 className="text-text1">خدمات شرکت ما</h2>
             <p className="text-text2">
                 ما با افتخار خدمات واردات و صادرات کامل و حرفه‌ای ارائه می‌دهیم.
                 تیم ما تخصص لازم را برای ارسال و دریافت کالاهای شما به و از بازارهای بین‌المللی داراست.
@@ -29,7 +29,13 @@ const About = () => {
                     description="مشاوره بازرگانی"
                 />
             </div>
+            <p className="text-text2 w-full text-center mt-5    ">
 
+                ما به شما کمک می کنیم تا کسب و کار خود را شکوفا کنید. با ما
+                <b className="underline mx-1 text-text1/70 cursor-pointer">
+                    تماس بگیرید.
+                </b>
+            </p>
         </div>
     );
 };
