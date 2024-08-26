@@ -24,7 +24,7 @@ export default function Page() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl" >اگر شما هم میخواهید محصولات خود را به کشور های خارجی صادر کنید</h2>
             <p dir='rtl'>برای دریافت اطلاعات بیشتر و مشاوره، شماره موبایل خود را وارد کنید.</p>
             <div>
-                <label for="hs-trailing-button-add-on" class="sr-only">Label</label>
+                <label class="sr-only">Label</label>
                 <div class="flex w-72 rounded-lg ">
                     <input type="text"
                         value={phoneNumber}
