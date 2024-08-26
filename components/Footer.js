@@ -55,7 +55,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="bg-primary text-text1 py-4 text-center mt-8">
+            <div className="bg-primary text-white py-4 text-center mt-8">
                 <p dir='ltr' >&copy; 2024 Arta-export کلیه حقوق محفوظ است.</p>
             </div>
             <div className="bg-text1/90 text-white/70 py-1 text-center ">

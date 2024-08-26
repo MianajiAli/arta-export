@@ -27,16 +27,16 @@ const RandomProductGrid = () => {
     }, []);
 
     return (
-        <div className="w-full px-[10%]" dir="rtl">
-            <div className="flex justify-between items-center">
+        <div className=" px-[10%]" dir="rtl">
+            <div className=" w-full flex justify-between items-center">
                 <h2 className="text-text1 "> برخی از محصولات صادراتی</h2>
                 <Link href="/products" >
                     <p className="text-text2">دیدن همه</p>
                 </Link>
             </div>
-            <div className="w-full flex gap-5 justify-center items-center flex-wrap  my-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mx-auto  my-7">
                 {randomProducts.map((product) => (
-                    <Link key={product.id} href="/products" >
+                    <Link key={product.id} href="/products" className="mx-auto" >
                         <ProductCard product={product} onClick={() => { }} />
                     </Link>
                 ))}

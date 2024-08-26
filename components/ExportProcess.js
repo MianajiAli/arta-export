@@ -46,7 +46,7 @@ const ExportProcess = () => {
     ];
 
     return (
-        <div dir="rtl" className="text-text2 px-[10%] w-full">
+        <div dir="rtl" className="text-text2 px-[10%] w-full bg-gradient-to-t from-back via-back to-back/0 z-[6]">
             <h2 className="mb-10 text-text1">مراحل صادرات کالا</h2>
             <ul className="flex flex-wrap justify-center gap-5">
                 {steps.map((step, index) => (
