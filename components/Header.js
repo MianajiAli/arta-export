@@ -1,8 +1,10 @@
+// components/Navbar.js
+
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { FaShoppingCart } from "react-icons/fa";
 import HeaderModal from "./HeaderModal"; // Import the HeaderModal component
@@ -18,13 +20,33 @@ const links = [
 export default function Navbar() {
     const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
+    const [textIndex, setTextIndex] = useState(0);
+
+    const texts = [
+        "صادرات کالا به کشورهای همسایه",
+        "آرتا اکسپورت"
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        }, 3000); // تغییر متن هر 3 ثانیه
+
+        return () => clearInterval(interval);
+    }, []);
 
     const isActive = (url) => (pathname === url ? 'underline !text-text1' : '');
 
     return (
         <header className="bg-gray-100 shadow-md fixed w-full z-20">
+            {/* NotificationBar directly integrated */}
+            <div className="bg-primary text-white text-center py-2 text-xs sm:text-sm md:text-base lg:text-lg w-full">
+                <div className="flex justify-center items-center w-full">
+                    <span>{texts[textIndex]}</span>
+                </div>
+            </div>
             <nav className="w-10/12 mx-auto flex justify-between items-center p-4" dir="rtl">
-                <span className="text-2xl font-bold text-primary ">آرتا اکسپورت</span>
+                <span className="text-2xl font-bold text-primary">آرتا اکسپورت</span>
 
                 {/* دکمه منوی همبرگری */}
                 <button onClick={() => setMenuOpen(true)} className="text-2xl text-text1 lg:hidden">
