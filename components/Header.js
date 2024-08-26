@@ -1,85 +1,65 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { FaShoppingCart } from "react-icons/fa"; 
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi"; // آیکون‌های منوی همبرگری
 
 const links = [
     { label: "خانه", url: "/" },
-    {
-        label: "محصولات",
-        url: "/products"
-    },
+    { label: "محصولات", url: "/products" },
+    { label: "مقالات", url: "/articles" }, 
     { label: "درباره ما", url: "/about-us" },
+    { label: "تماس با ما", url: "/contact" },
 ];
 
-export default function Page() {
-    const [open, setOpen] = useState(null);
+export default function Navbar() {
     const pathname = usePathname();
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    // Helper function to check if a link is active
-    const isActive = (url) => pathname === url ? 'bg-primary font-bold ' : 'text-black';
-
-    // Helper function to check if any child link is active
-    const isParentActive = (children) => {
-        return children.some(child => pathname === child.url) ? 'bg-primary font-bold ' : 'text-black';
-    };
+    const isActive = (url) => (pathname === url ? 'text-primary font-bold' : 'text-gray-800');
 
     const renderLinks = () => {
         return links.map((link, index) => (
-            <div
-                key={index}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-                className="relative"
-            >
-                {link.children ? (
-                    <>
-                        <span
-                            className={`cursor-pointer ${isParentActive(link.children)}`}
-                        >
-                            {link.label}
-                        </span>
-                        {open === index && (
-                            <div className="absolute  right-0 pt-3 rounded-xl bg-white shadow-lg">
-                                {link.children.map((child, childIndex) => (
-                                    <Link key={childIndex} href={child.url} className={`block rounded-lg min-w-24 py-2 px-2 ${isActive(child.url)} hover:bg-primary hover:text-white`}>
-                                        {child.label}
-
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
-                    </>
-                ) : (
-                    <Link href={link.url} className={`text-text1  ${isActive(link.url)}`}>
-                        {link.label}
-                    </Link>
-                )}
-            </div>
+            <Link key={index} href={link.url}>
+                <span className={`block px-4 py-2 ${isActive(link.url)} hover:text-primary cursor-pointer`}>
+                    {link.label}
+                </span>
+            </Link>
         ));
     };
 
-    const handleMouseEnter = (index) => {
-        setOpen(index);
-    };
-
-    const handleMouseLeave = () => {
-        setOpen(null);
-    };
-
     return (
-        <header className="w-full bg-back2 z-10">
-            <div className="font-bold w-full h-12 bg-primary text-text1 text-center flex justify-center items-center">
-                صادرات کالا به کشور های همسایه
+        <header className="w-full bg-gray-100 shadow-md z-10">
+            {/* نوار اطلاع‌رسانی بالا */}
+            <div className="bg-primary text-white text-center py-2 text-xs sm:text-sm md:text-base lg:text-lg">
+                صادرات کالا به کشورهای همسایه
             </div>
-            <nav className="w-full h-20 flex justify-between px-[10%] items-center" dir="rtl">
-                <div className="flex justify-center items-center gap-10">
-                    <span className=" text-2xl md:text-4xl font-bold text-text1">آرتا اکسپورت</span>
-                    {renderLinks()}</div>
-                <div></div>
-            </nav>
 
+            {/* نوار ناوبری اصلی */}
+            <nav className="container mx-auto px-3  lg:px-10 h-16 md:h-20 flex justify-between items-center" dir="rtl">
+                {/* برندینگ و منوی همبرگری */}
+                <div className="flex items-center justify-between w-full md:w-auto">
+                    {/* نام شرکت */}
+                    <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-primary">آرتا اکسپورت</span>
+                    {/* دکمه منوی همبرگری برای موبایل و تبلت */}
+                    <div className="lg:hidden">
+                        <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl text-gray-800">
+                            {menuOpen ? <HiX /> : <HiMenu />} {/* نمایش منوی همبرگری یا ایکس */}
+                        </button>
+                    </div>
+                </div>
+
+                {/* منوی لینک‌ها و دکمه خرید */}
+                <div className={`mt-4 md:mt-0 flex-col md:flex-row flex items-center gap-5 ${menuOpen ? 'block' : 'hidden'} w-full md:w-auto md:flex md:items-center`}>
+                    {renderLinks()}
+                    <Link href="/buy" className="bg-green-500 text-white  rounded-lg flex items-center hover:bg-green-600 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        <FaShoppingCart className="ml-2" />
+                        خرید محصول
+                    </Link>
+                </div>
+            </nav>
         </header>
     );
 }
