@@ -7,12 +7,12 @@ const ProductCard = ({ product, onClick }) => {
 
     return (
         <div
-            className="w-60 h-80  text-text2 rounded-xl cursor-pointer shadow-lg p-3 " // پس‌زمینه کارت خاکستری
+            className="w-60 h-80  text-text2 rounded-xl cursor-pointer shadow-lg p-3 border border-text1/10" // پس‌زمینه کارت خاکستری
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => onClick(product)}
         >
-            <div className="w-full aspect-square p-3 bg-white  rounded-lg relative shadow-sm"> {/* حاشیه کلفت‌تر خاکستری */}
+            <div className="w-full opacity-90 aspect-square p-3 bg-white  rounded-lg relative shadow-sm"> {/* حاشیه کلفت‌تر خاکستری */}
                 <Image
                     src={isHovered && product.images[1] ? product.images[1] : product.images[0]}
                     alt={product.name}
@@ -21,7 +21,7 @@ const ProductCard = ({ product, onClick }) => {
                     priority={true}
                 />
             </div>
-            <div className=" text-text1 py-3" dir="rtl">
+            <div className=" text-text1/90 py-3" dir="rtl">
                 <span className="text-xl font-bold">{product.name}</span>
                 <p className="text-sm mt-1 text-text2">{product.description}</p>
             </div>
