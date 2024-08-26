@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className} >
         <div className='font-medium bg-back min-h-screen  flex flex-col relative '>
           <Header />
-          <div className="pt-20">
+          <div className="pt-28">
 
             {children}
           </div>
