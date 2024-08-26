@@ -21,16 +21,16 @@ export default function Page() {
         <div className="w-10/12 mx-auto justify-center items-center flex flex-col gap-5 text-text1 text-center">
             <div className="w-full border-t border-gray-700 mb-8"></div>
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl" >اگر شما هم میخواهید محصولات خود را به کشور های خارجی صادر کنید</h2>
-            <p dir='rtl'>برای دریافت اطلاعات بیشتر و مشاوره، شماره موبایل خود را وارد کنید.</p>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-text1/90" >اگر شما هم میخواهید محصولات خود را به کشور های خارجی صادر کنید</h2>
+            <p dir='rtl' className="text-md text-text2 md:text-xl">برای دریافت اطلاعات بیشتر و مشاوره، شماره موبایل خود را وارد کنید.</p>
             <div>
                 <label class="sr-only">Label</label>
-                <div class="flex w-72 rounded-lg ">
+                <div class="flex w-72 rounded-lg  ">
                     <input type="text"
                         value={phoneNumber}
                         placeholder="0912 123 1212"
                         onChange={handleInputChange} class="rounded-lg shadow-md  py-2 px-7 text-2xl block w-full border-gray-200  rounded-s-lg  " />
-                    <button type="button" class=" shadow-md rounded-lg ml-3 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-xl font-semibold rounded-e-md border border-transparent bg-white text-text1 hover:bg-text1/10">
+                    <button type="button" class=" shadow-md rounded-lg ml-3 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-xl font-semibold rounded-e-md border border-transparent bg-green-200 text-green-700">
                         ثبت
                     </button>
                 </div>
