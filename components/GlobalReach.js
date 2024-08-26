@@ -24,7 +24,7 @@ const GlobalReach = () => {
                         objectFit="contain"
                         className="opacity-70"
                     />
-                    <div className={`absolute inset-0 flex flex-col justify-center items-center text-text2`}>
+                    <div className={`absolute inset-0 flex flex-col justify-center items-center text-text1`}>
                         {data.map((item, index) => (
                             <div key={index} className="mb-4">
                                 <span className="text-4xl font-semibold">{item.value}</span> {/* اندازه بزرگتر */}
