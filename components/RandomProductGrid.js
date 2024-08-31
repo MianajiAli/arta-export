@@ -34,6 +34,9 @@ const RandomProductGrid = () => {
                     <p className="text-text2">دیدن همه</p>
                 </Link>
             </div>
+            <p className="py-5 text-text2">    صادرات محصولات ایرانی از جمله صنایع دستی، لوازم آشپزخانه، آرایشی و بهداشتی، صنایع غذایی، تجهیزات و لوازم برق و الکتونیک و دیگر صنایعی که قابلیت صادرات دارند.
+                نمایشگاه‌های بین‌المللی و نمایشگاه‌های محلی جهت توسعه بازار و ترویج محصولات ایرانی.
+                مشاوره در زمینه بازاریابی، برندسازی و استراتژی‌های صادراتی.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mx-auto  my-7">
                 {randomProducts.map((product) => (
                     <Link key={product.id} href="/products" className="mx-auto" >

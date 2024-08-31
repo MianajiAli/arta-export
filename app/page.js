@@ -7,6 +7,7 @@ import PhoneNumber from '@/components/PhoneNumber';
 import ExportProcess from '@/components/ExportProcess';
 import GlobalReach from '@/components/GlobalReach';
 import FixedBackgroundComponent from '@/components/FixedBg';
+import Feedback from '@/components/Feedback';
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
       <ExportProcess></ExportProcess>
       <FixedBackgroundComponent />
       <RandomProductGrid />
+      <Feedback></Feedback>
       <PhoneNumber />
     </div>
   );
