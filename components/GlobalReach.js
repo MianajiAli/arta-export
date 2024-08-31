@@ -33,7 +33,7 @@ export default function GlobalReach() {
     });
     return (
         <div className="relative w-full h-[400px] z-2 ">
-            <div className="top-0 -left-32 sm:-left-28 md:left-0 lg:left-60 absolute scale-[250%] "> {/* Adjust size here */}
+            <div className="top-0 -left-32 sm:-left-28 md:left-0 lg:left-96 absolute scale-[250%] "> {/* Adjust size here */}
                 <WorldMap
                     color="#FFD580"
                     backgroundColor="none"
