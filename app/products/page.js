@@ -43,10 +43,11 @@ export default function Page() {
 
     return (
         <>
-            <h2 className="w-full p-10 text-center text-text1">ظروف مسی</h2>
+            <h1 className="w-full p-10 text-center text-text1">محصولات صادراتی آرتا اکسپورت</h1>
             <div className="flex flex-col-reverse md:flex-row  ">
 
                 <div className="w-10/12 mx-auto md:mx-0">
+                    <h2 className="w-full p-5 text-center text-text1">ظروف مسی</h2>
                     <div className="mx-auto w-10/12 flex flex-wrap justify-center gap-5 items-start">
                         {products.length === 0 ? (
                             <div>No products available</div>

@@ -1,89 +1,160 @@
-[
-  {
-    "id": 1,
-    "name": "قابلمه مسی",
-    "description": "قابلمه‌ای سنتی مناسب پخت انواع غذاها.",
-    "images": [
-      "/images/products/coper/1/1_1.jpg",
-      "/images/products/coper/1/1_2.jpg",
-      "/images/products/coper/1/1_3.jpg",
-      "/images/products/coper/1/1_4.jpg"
-    ]
-  },
-  {
-    "id": 2,
-    "name": "ماهیتابه مسی",
-    "description": "ماهیتابه‌ای مسی با انتقال حرارت عالی.",
-    "images": [
-      "/images/products/coper/2/2_11.jpg",
-      "/images/products/coper/2/2_12.jpg",
-      "/images/products/coper/2/2_13.jpg"
-    ]
-  },
-  {
-    "id": 3,
-    "name": "ماهیتابه",
-    "description": "ماهیتابه‌ای همه‌کاره با پخش حرارت یکنواخت.",
-    "images": [
-      "/images/products/coper/3/3_1.jpg",
-      "/images/products/coper/3/3_2.jpg",
-      "/images/products/coper/3/3_3.jpg",
-      "/images/products/coper/3/3_4.jpg"
-    ]
-  },
-  {
-    "id": 4,
-    "name": "پیاله مسی",
-    "description": "پیاله‌ای زیبا برای سرو انواع خوراکی‌ها.",
-    "images": [
-      "/images/products/coper/4/4_1.jpg",
-      "/images/products/coper/4/4_2.jpg",
-      "/images/products/coper/4/4_3.jpg"
-    ]
-  },
-  {
-    "id": 5,
-    "name": "کاسه مسی",
-    "description": "کاسه‌ای مسی مناسب سرو یا مخلوط کردن مواد.",
-    "images": [
-      "/images/products/coper/5/5_27.jpg",
-      "/images/products/coper/5/5_29.jpg"
-    ]
-  },
-  {
-    "id": 6,
-    "name": "قندان سیب مسی",
-    "description": "قندان سیبی مسی، زیبا و کاربردی.",
-    "images": [
-      "/images/products/coper/6/6_01.jpg",
-      "/images/products/coper/6/6_02.jpg",
-      "/images/products/coper/6/6_03.jpg",
-      "/images/products/coper/6/6_04.jpg",
-      "/images/products/coper/6/6_4.jpg"
-    ]
-  },
-  {
-    "id": 7,
-    "name": "کتری مسی",
-    "description": "کتری مسی مناسب جوشاندن آب.",
-    "images": [
-      "/images/products/coper/7/7_1.jpg",
-      "/images/products/coper/7/7_2.jpg",
-      "/images/products/coper/7/7_3.jpg",
-      "/images/products/coper/7/7_34.jpg",
-      "/images/products/coper/7/7_35.jpg"
-    ]
-  },
-  {
-    "id": 8,
-    "name": "سرویس قابلمه مسی",
-    "description": "سرویس کامل قابلمه مسی برای آشپزی.",
-    "images": [
-      "/images/products/coper/8/8_2.jpg",
-      "/images/products/coper/8/8_3.jpg",
-      "/images/products/coper/8/8_36.jpg",
-      "/images/products/coper/8/8_37.jpg",
-      "/images/products/coper/8/8_38.jpg"
-    ]
-  }
-]
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "صنایع دستی",
+      "description": "Traditional handcrafted items.",
+      "subcategories": [
+        {
+          "id": 1.1,
+          "name": "چاقو",
+          "description": "Various types of knives.",
+          "products": [
+            {
+              "id": 101,
+              "name": "چاقوی آشپزخانه",
+              "description": "چاقوی مناسب برای آشپزخانه.",
+              "images": [
+                "/images/products/handcrafted/knife/1_1.jpg",
+                "/images/products/handcrafted/knife/1_2.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1.2,
+          "name": "ظروف مسی",
+          "description": "Copperware items.",
+          "products": [
+            {
+              "id": 201,
+              "name": "قابلمه مسی",
+              "description": "قابلمه‌ای سنتی مناسب پخت انواع غذاها.",
+              "images": [
+                "/images/products/coper/1/1_1.jpg",
+                "/images/products/coper/1/1_2.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "مراقبتی بهداشتی",
+      "description": "Health and personal care products.",
+      "subcategories": [
+        {
+          "id": 2.1,
+          "name": "شامپو",
+          "description": "Different types of shampoos.",
+          "products": [
+            {
+              "id": 301,
+              "name": "شامپو مرطوب‌کننده",
+              "description": "شامپویی برای مرطوب کردن موها.",
+              "images": [
+                "/images/products/health/shampoo/1_1.jpg",
+                "/images/products/health/shampoo/1_2.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2.2,
+          "name": "ماسک مو",
+          "description": "Various hair masks.",
+          "products": [
+            {
+              "id": 302,
+              "name": "ماسک مو تقویت‌کننده",
+              "description": "ماسکی برای تقویت موها.",
+              "images": [
+                "/images/products/health/hair-mask/1_1.jpg",
+                "/images/products/health/hair-mask/1_2.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "تجهیرات پزشکی و ارتوپدی",
+      "description": "Medical and orthopedic equipment.",
+      "products": [
+        {
+          "id": 401,
+          "name": "دستگاه فشار خون",
+          "description": "دستگاهی برای اندازه‌گیری فشار خون.",
+          "images": [
+            "/images/products/medical/pressure-device/1_1.jpg",
+            "/images/products/medical/pressure-device/1_2.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "لوازم آشپزخانه",
+      "description": "Kitchenware and appliances.",
+      "subcategories": [
+        {
+          "id": 4.1,
+          "name": "کتری قوری",
+          "description": "Kettles and teapots.",
+          "products": [
+            {
+              "id": 501,
+              "name": "کتری برقی",
+              "description": "کتری برقی با ظرفیت بالا.",
+              "images": [
+                "/images/products/kitchen/kettle/1_1.jpg",
+                "/images/products/kitchen/kettle/1_2.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4.2,
+          "name": "فلاکس",
+          "description": "Flasks and thermoses.",
+          "products": [
+            {
+              "id": 502,
+              "name": "فلاکس استیل",
+              "description": "فلاکس استیل ضد زنگ.",
+              "images": [
+                "/images/products/kitchen/thermos/1_1.jpg",
+                "/images/products/kitchen/thermos/1_2.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "تجهیرات برقی",
+      "description": "Electrical equipment.",
+      "subcategories": [
+        {
+          "id": 5.1,
+          "name": "سیم و برق",
+          "description": "Wires and electrical components.",
+          "products": [
+            {
+              "id": 601,
+              "name": "سیم برق",
+              "description": "سیم برق با کیفیت بالا.",
+              "images": [
+                "/images/products/electrical/wire/1_1.jpg",
+                "/images/products/electrical/wire/1_2.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
