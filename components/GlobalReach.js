@@ -10,11 +10,9 @@ export default function GlobalReach() {
         color,
     }) => ({
         fill: countryCode === "IR" ? "orange" : color,
-        fillOpacity: countryValue
-            ? 0.1 + (1.5 * (countryValue - minValue)) / (maxValue - minValue)
-            : 0,
+        fillOpacity: countryValue ? 0.8 : 0.1,
         stroke: "black",
-        strokeWidth: .5,
+        strokeWidth: .7,
         strokeOpacity: 0.2,
         cursor: "pointer",
     });

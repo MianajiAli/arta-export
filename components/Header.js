@@ -66,8 +66,7 @@ export default function Navbar() {
 
                 <Link href="/buy" className="hidden lg:flex items-center bg-green-200 text-green-600 p-2 rounded-lg">
                     <FaShoppingCart className="ml-2" />
-                    خرید محصول
-                </Link>
+                    صادرات کالا                </Link>
             </nav>
 
             {/* HeaderModal component for mobile menu */}
@@ -81,8 +80,7 @@ export default function Navbar() {
                 ))}
                 <Link href="/buy" className="flex items-center bg-green-200 text-green-600 p-2 rounded-lg mt-4">
                     <FaShoppingCart className="ml-2" />
-                    خرید محصول
-                </Link>
+                    صادرات کالا                 </Link>
             </HeaderModal>
         </header>
     );
