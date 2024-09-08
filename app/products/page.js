@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '@/components/ProductCard';
 import Modal from '@/components/Modal';
-import SideBar from '@/components/SideBar';
+import PhoneNumber from '@/components/PhoneNumber';
 import { fetchProducts } from '@/lib/api';
 
 export default function Page() {
@@ -43,7 +43,7 @@ export default function Page() {
     return (
         <>
             <h1 className="w-full p-10 text-center text-text1">محصولات صادراتی آرتا اکسپورت</h1>
-            <div className="flex flex-col-reverse md:flex-row">
+            <div className="flex flex-col">
 
                 <div className="w-full mx-auto md:mx-0">
                     {categories.length === 0 ? (
@@ -79,7 +79,7 @@ export default function Page() {
                         product={selectedProduct}
                     />
                 </div>
-
+                <PhoneNumber />
             </div>
         </>
     );
