@@ -12,7 +12,7 @@ import HeaderModal from "./HeaderModal"; // Import the HeaderModal component
 const links = [
     { label: "خانه", url: "/" },
     { label: "محصولات", url: "/products" },
-    { label: "مقالات", url: "" },
+    { label: "مقالات", url: "/blog" },
     { label: "تماس با ما", url: "/contact" },
 ];
 

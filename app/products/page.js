@@ -56,15 +56,26 @@ export default function Page() {
                                     category.subcategories.map((subcategory) => (
                                         <div key={subcategory.id} className="mb-6">
                                             <h3 className="text-right px-[10%] w-full p-5 text-text1">{subcategory.name}</h3>
-                                            <div className="mx-auto w-10/12 flex flex-wrap justify-center gap-5 items-start">
+                                            <div className="mx-auto w-10/12">
                                                 {subcategory.products.length === 0 ? (
                                                     <div>No products available</div>
                                                 ) : (
-                                                    subcategory.products.map((product) => (
-                                                        <ProductCard key={product.id} product={product} onClick={handleCardClick} />
-                                                    ))
+                                                    <div dir="rtl" className="relative">
+                                                        {/* Carousel Wrapper */}
+                                                        <div className="flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory touch-pan-x space-x-5 py-4 px-2">
+                                                            {subcategory.products.map((product) => (
+                                                                <div
+                                                                    key={product.id}
+                                                                    className="snap-start flex-shrink-0 w-64 h-auto"
+                                                                >
+                                                                    <ProductCard product={product} onClick={handleCardClick} />
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
                                                 )}
                                             </div>
+
                                         </div>
                                     ))
                                 ) : (
