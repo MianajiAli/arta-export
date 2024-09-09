@@ -1,54 +1,65 @@
 import React from 'react';
+import { FaQuoteLeft } from 'react-icons/fa'; // Import an icon for quotes
 
 // Define user data statically
 const users = [
     {
         name: "احمد احمدی",
         phoneNumber: "09123456789",
-        feedback: "متن بازخورد در اینجا قرار می‌گیرد. این بخش برای نمایش نظرات کاربران است.",
+        feedback: "این یک بازخورد نمونه است که برای نمایش بهتر UI و تجربه کاربری استفاده شده است.",
         imageUrl: "https://example.com/user-image1.jpg" // Replace with actual image URLs
     },
     {
         name: "فاطمه محمدی",
         phoneNumber: "09234567890",
-        feedback: "بازخورد دوم از کاربر دیگری است. این متن برای مثال است.",
+        feedback: "این بازخورد دیگری از یک کاربر متفاوت است. امیدوارم که از این طراحی لذت ببرید.",
         imageUrl: "https://example.com/user-image2.jpg"
     },
     {
         name: "علی رضایی",
         phoneNumber: "09345678901",
-        feedback: "بازخورد سوم از یک کاربر دیگر. لطفاً این متن را مشاهده کنید.",
+        feedback: "این بازخورد سوم است که از یک کاربر دیگر دریافت شده. طراحی این بخش زیباست.",
         imageUrl: "https://example.com/user-image3.jpg"
     }
 ];
 
 const Feedback = () => {
     return (
-        <div className=" mx-auto flex flex-col xl:flex-row items-center gap-4">
-            {users.map((user, index) => (
-                <div key={index} dir="rtl" className="w-80 bg-back3 text-text1 rounded-xl p-4 shadow-lg">
-                    <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 bg-gray-300 rounded-full ml-3">
-                            {user.imageUrl && (
-                                <img
-                                    src={user.imageUrl}
-                                    alt="User"
-                                    className="w-full h-full rounded-full object-cover"
-                                />
-                            )}
+        <div className=" from-blue-50 to-blue-100 py-12 px-6">
+            <div className="mx-auto p-6 max-w-screen-lg">
+                <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-800">نظرات کاربران</h2>
+                <div className="flex flex-col xl:flex-row items-center gap-10">
+                    {users.map((user, index) => (
+                        <div key={index} dir="rtl" className="w-full xl:w-80 bg-white text-gray-800 rounded-3xl p-8 shadow-xl hover:shadow-2xl transform transition-transform hover:scale-105">
+                            <div className="flex items-center mb-6">
+                                <div className="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden">
+                                    {user.imageUrl && (
+                                        <img
+                                            src={user.imageUrl}
+                                            alt={user.name}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    )}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 rounded-full"></div>
+                                </div>
+                                <div className="mr-4">
+                                    <p className="text-lg font-bold">{user.name}</p>
+                                    <p className="text-sm text-gray-500">{user.phoneNumber}</p>
+                                </div>
+                            </div>
+                            <div className="relative bg-gray-50 rounded-2xl p-6">
+                                <FaQuoteLeft className="text-primary text-3xl absolute -top-6 -right-6 text-blue-500 opacity-70" />
+                                <p className="text-sm text-gray-700 italic">
+                                    {user.feedback}
+                                </p>
+                                <div className="absolute -bottom-6 left-0 w-full flex justify-center">
+                                    <div className="bg-gradient-to-r from-blue-500 to-blue-700 w-24 h-1 rounded-full"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <p className="text-lg font-semibold">{user.name}</p>
-                            <p className="text-sm text-gray-500">{user.phoneNumber}</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p className="text-sm">
-                            {user.feedback}
-                        </p>
-                    </div>
+                    ))}
                 </div>
-            ))}
+            </div>
         </div>
     );
 }

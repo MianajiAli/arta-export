@@ -13,7 +13,6 @@ const links = [
     { label: "خانه", url: "/" },
     { label: "محصولات", url: "/products" },
     { label: "مقالات", url: "" },
-    { label: "درباره ما", url: "/about-us" },
     { label: "تماس با ما", url: "/contact" },
 ];
 
@@ -24,7 +23,7 @@ export default function Navbar() {
 
     const texts = [
         "صادرات کالا به کشورهای همسایه",
-        "آرتا اکسپورت"
+        "همکار ما باش"
     ];
 
     useEffect(() => {
@@ -42,11 +41,18 @@ export default function Navbar() {
             {/* NotificationBar directly integrated */}
             <div className="bg-primary text-white text-center py-2 text-xs sm:text-sm md:text-base lg:text-lg w-full">
                 <div className="flex justify-center items-center w-full">
+                    {texts[textIndex] === "همکار ما باش" && (
+                        <Link href="/contact">
+                            <button className="mr-4 bg-secondary text-white px-2 py-0 rounded-lg text-xs sm:text-sm md:text-base">
+                                کلیک کن
+                            </button>
+                        </Link>
+                    )}
                     <span>{texts[textIndex]}</span>
                 </div>
             </div>
             <nav className="w-10/12 mx-auto flex justify-between items-center p-4" dir="rtl">
-                <span className="text-2xl font-bold text-primary">آرتا اکسپورت</span>
+                <span className="text-4xl font-bold text-primary">آرتا اکسپورت</span>
 
                 {/* دکمه منوی همبرگری */}
                 <button onClick={() => setMenuOpen(true)} className="text-2xl text-text1 lg:hidden">
@@ -66,7 +72,8 @@ export default function Navbar() {
 
                 <Link href="/buy" className="hidden lg:flex items-center bg-green-200 text-green-600 p-2 rounded-lg">
                     <FaShoppingCart className="ml-2" />
-                    صادرات کالا                </Link>
+                    صادرات کالا
+                </Link>
             </nav>
 
             {/* HeaderModal component for mobile menu */}
@@ -80,7 +87,8 @@ export default function Navbar() {
                 ))}
                 <Link href="/buy" className="flex items-center bg-green-200 text-green-600 p-2 rounded-lg mt-4">
                     <FaShoppingCart className="ml-2" />
-                    صادرات کالا                 </Link>
+                    صادرات کالا
+                </Link>
             </HeaderModal>
         </header>
     );
