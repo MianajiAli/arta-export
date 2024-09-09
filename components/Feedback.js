@@ -1,25 +1,25 @@
 import React from 'react';
 import { FaQuoteLeft } from 'react-icons/fa'; // Import an icon for quotes
 
-// Define user data statically
+// Define user data statically with default images
 const users = [
     {
         name: "احمد احمدی",
         phoneNumber: "09123456789",
         feedback: "این یک بازخورد نمونه است که برای نمایش بهتر UI و تجربه کاربری استفاده شده است.",
-        imageUrl: "https://example.com/user-image1.jpg" // Replace with actual image URLs
+        imageUrl: "https://via.placeholder.com/150" // Default image 1
     },
     {
         name: "فاطمه محمدی",
         phoneNumber: "09234567890",
         feedback: "این بازخورد دیگری از یک کاربر متفاوت است. امیدوارم که از این طراحی لذت ببرید.",
-        imageUrl: "https://example.com/user-image2.jpg"
+        imageUrl: "https://via.placeholder.com/150" // Default image 2
     },
     {
         name: "علی رضایی",
         phoneNumber: "09345678901",
         feedback: "این بازخورد سوم است که از یک کاربر دیگر دریافت شده. طراحی این بخش زیباست.",
-        imageUrl: "https://example.com/user-image3.jpg"
+        imageUrl: "https://via.placeholder.com/150" // Default image 3
     }
 ];
 
