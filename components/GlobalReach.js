@@ -12,7 +12,7 @@ export default function GlobalReach() {
         fill: countryCode === "IR" ? "orange" : color,
         fillOpacity: countryValue ? 0.8 : 0.1,
         stroke: "black",
-        strokeWidth: .7,
+        strokeWidth: .6,
         strokeOpacity: 0.2,
         cursor: "pointer",
     });
@@ -29,20 +29,23 @@ export default function GlobalReach() {
     ];
 
     return (
-        <div className="relative w-full h-[400px] z-2 ">
-            <div className="top-0 -left-32 sm:-left-28 md:left-0 lg:left-96 absolute scale-[250%] "> {/* Adjust size here */}
-                <WorldMap
-                    color="#FFD580"
-                    backgroundColor="none"
-                    value-suffix="people"
-                    styleFunction={getStyle}
-                    size="responsive"  // Use responsive size
-                    data={data}
-                    tooltipTextColor="none"
-                    tooltipBgColor="none"
+        <div className="relative w-full h-[400px] z-2  overflow-hidden ">
+            <div className="flex justify-center items-center w-full h-[400px] z-2  overflow-hidden ">
 
-                />
+                <div className="top-0   absolute scale-[150%] "> {/* Adjust size here */}
+                    <WorldMap
+                        color="#FFD580"
+                        backgroundColor="none"
+                        styleFunction={getStyle}
+                        size="responsive"  // Use responsive size
+                        data={data}
+                        tooltipTextColor="none"
+                        tooltipBgColor="none"
+                        borderColor="#fff"
+                    />
+                </div>
             </div>
+            <div className="z-3 top-0 w-full h-full bg-black bg-opacity-50"></div>
         </div>
     );
 }
