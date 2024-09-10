@@ -70,7 +70,7 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                <Link href="/buy" className="hidden lg:flex items-center bg-green-200 text-green-600 p-2 rounded-lg">
+                <Link href="/products" className="hidden lg:flex items-center bg-green-200 text-green-600 p-2 rounded-lg">
                     <FaShoppingCart className="ml-2" />
                     صادرات کالا
                 </Link>
@@ -85,7 +85,7 @@ export default function Navbar() {
                         </span>
                     </Link>
                 ))}
-                <Link href="/buy" className="flex items-center bg-green-200 text-green-600 p-2 rounded-lg mt-4">
+                <Link href="/products" className="flex items-center bg-green-200 text-green-600 p-2 rounded-lg mt-4">
                     <FaShoppingCart className="ml-2" />
                     صادرات کالا
                 </Link>
