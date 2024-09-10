@@ -5,23 +5,34 @@ import Image from 'next/image';
 const Modal = ({ isOpen, onClose, product }) => {
     const modalRef = useRef();
     const [selected, setSelected] = useState(0);
+    const [imageErrors, setImageErrors] = useState([]);
+
+    // Fallback image URL
+    const defaultImage = "/images/default.png";
 
     useEffect(() => {
-        // Reset the selected image index to 0 whenever the modal is opened
         if (isOpen) {
             setSelected(0);
             document.addEventListener('mousedown', handleClickOutside);
+            // Reset the error state when the modal opens
+            setImageErrors(Array(product?.images.length).fill(false));
         } else {
             document.removeEventListener('mousedown', handleClickOutside);
         }
 
         return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, [isOpen]);
+    }, [isOpen, product?.images.length]);
 
     const handleClickOutside = (event) => {
         if (modalRef.current && !modalRef.current.contains(event.target)) {
             onClose();
         }
+    };
+
+    const handleImageError = (index) => {
+        const newImageErrors = [...imageErrors];
+        newImageErrors[index] = true;
+        setImageErrors(newImageErrors);
     };
 
     if (!isOpen || !product) return null;
@@ -42,12 +53,13 @@ const Modal = ({ isOpen, onClose, product }) => {
                     </div>
                     <div className="w-52 h-auto aspect-square relative bg-gray-100 flex justify-center items-center mt-2">
                         <Image
-                            src={product.images[selected]}
+                            src={imageErrors[selected] ? defaultImage : product.images[selected]}
                             alt={product.name}
                             layout="fill"
                             objectFit="cover"
                             className="rounded-md"
-                            priority={true} // Optional: Use if image needs to be loaded immediately
+                            onError={() => handleImageError(selected)}
+                            priority={true}
                         />
                     </div>
                 </div>
@@ -56,12 +68,13 @@ const Modal = ({ isOpen, onClose, product }) => {
                         {product.images.map((img, idx) => (
                             <div key={idx} className="relative w-20 h-20">
                                 <Image
-                                    src={img}
+                                    src={imageErrors[idx] ? defaultImage : img}
                                     alt={`Additional ${idx}`}
                                     layout="fill"
                                     objectFit="cover"
                                     className={`cursor-pointer ${selected === idx ? 'border-2 border-blue-500' : ''}`}
                                     onClick={() => setSelected(idx)}
+                                    onError={() => handleImageError(idx)}
                                 />
                             </div>
                         ))}

@@ -4,24 +4,32 @@ import Image from 'next/image';
 
 const ProductCard = ({ product, onClick }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const [imageError, setImageError] = useState(false);
+
+    // Fallback image URL
+    const defaultImage = "/images/default.png";
 
     return (
         <div
-            className="w-60 h-80  text-text2 rounded-xl cursor-pointer shadow-lg p-3 border border-text1/10" // پس‌زمینه کارت خاکستری
+            className="w-full md:w-60 h-80 text-text2 rounded-xl cursor-pointer shadow-lg p-3 border border-text1/10"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => onClick(product)}
         >
-            <div className="w-full opacity-90 aspect-square p-3 bg-white  rounded-lg relative shadow-sm"> {/* حاشیه کلفت‌تر خاکستری */}
+            <div className="w-full opacity-90 aspect-square p-3 bg-white rounded-lg relative shadow-sm">
                 <Image
-                    src={isHovered && product.images[1] ? product.images[1] : product.images[0]}
-                    alt={product.name}
+                    // Check if product images exist, if not use the default image
+                    src={imageError ? defaultImage : (isHovered && product.images?.[1]) || product.images?.[0] || defaultImage}
+                    alt={`Image of ${product.name}`}
                     layout='fill'
-                    className="w-full h-full rounded-lg object-cover"
+                    className="w-full h-full rounded-lg object-cover flex justify-center items-center"
                     priority={true}
+
+                    // Add onError handler to fallback to the default image
+                    onError={() => setImageError(true)}
                 />
             </div>
-            <div className=" text-text1/90 py-3" dir="rtl">
+            <div className="text-text1/90 py-3" dir="rtl">
                 <span className="text-xl font-bold">{product.name}</span>
                 <p className="text-sm mt-1 text-text2">{product.description}</p>
             </div>

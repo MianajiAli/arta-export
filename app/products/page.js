@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '@/components/ProductCard';
 import Modal from '@/components/Modal';
-import SideBar from '@/components/SideBar';
 import { fetchProducts } from '@/lib/api';
+import FixedBackgroundComponent from '@/components/FixedBg';
 
 export default function Page() {
     const [categories, setCategories] = useState([]);
@@ -42,7 +42,8 @@ export default function Page() {
 
     return (
         <>
-            <h1 className="w-full p-10 text-center text-text1">محصولات صادراتی آرتا اکسپورت</h1>
+            <FixedBackgroundComponent></FixedBackgroundComponent>
+
             <div className="flex flex-col-reverse md:flex-row">
 
                 <div className="w-full mx-auto md:mx-0">
