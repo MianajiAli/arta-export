@@ -7,7 +7,7 @@ import FixedBackgroundComponent from '@/components/FixedBg';
 
 export default function Page() {
     const [categories, setCategories] = useState([]);
-    const [loading, setLoading] = useState(true);
+
     const [error, setError] = useState(null);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,8 +19,6 @@ export default function Page() {
                 setCategories(data.categories); // Adjust based on the actual data structure
             } catch (error) {
                 setError(error);
-            } finally {
-                setLoading(false);
             }
         };
 
@@ -37,7 +35,7 @@ export default function Page() {
         setSelectedProduct(null);
     };
 
-    if (loading) return <div>Loading...</div>;
+
     if (error) return <div>Error: {error.message}</div>;
 
     return (
