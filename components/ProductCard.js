@@ -11,7 +11,7 @@ const ProductCard = ({ product, onClick }) => {
 
     return (
         <div
-            className="w-full md:w-60 h-80 text-text2 rounded-xl cursor-pointer shadow-lg p-3 border border-text1/10"
+            className="w-full md:w-60 min-h-80 text-text2 rounded-xl cursor-pointer shadow-lg p-3 border border-text1/10 mx-auto "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => onClick(product)}

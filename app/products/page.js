@@ -65,7 +65,7 @@ export default function Page() {
                                                             {subcategory.products.map((product) => (
                                                                 <div
                                                                     key={product.id}
-                                                                    className="snap-start flex-shrink-0 w-64 h-auto"
+                                                                    className="snap-start flex-shrink-0 w-72 md:w-64 h-auto"
                                                                 >
                                                                     <ProductCard product={product} onClick={handleCardClick} />
                                                                 </div>
