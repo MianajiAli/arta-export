@@ -1,7 +1,6 @@
 "use client";
 
 import { HiX } from "react-icons/hi";
-import { FaShoppingCart } from "react-icons/fa";
 
 export default function HeaderModal({ isOpen, onClose, children }) {
     return (

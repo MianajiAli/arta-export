@@ -26,7 +26,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-10/12 pt-10 mx-auto">
       {blogs.map((blog, index) => (
         <div key={index}>
           <Link href={blog.url}>

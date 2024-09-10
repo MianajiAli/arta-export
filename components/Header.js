@@ -79,7 +79,7 @@ export default function Navbar() {
             {/* HeaderModal component for mobile menu */}
             <HeaderModal isOpen={menuOpen} onClose={() => setMenuOpen(false)}>
                 {links.map((link, index) => (
-                    <Link key={index} href={link.url}>
+                    <Link onClick={() => { setMenuOpen(false) }} key={index} href={link.url}>
                         <span className={`block p-2 ${isActive(link.url)} text-text2 hover:text-text1`}>
                             {link.label}
                         </span>
