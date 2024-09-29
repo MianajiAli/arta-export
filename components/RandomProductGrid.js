@@ -56,7 +56,7 @@ const RandomProductGrid = () => {
             <Link href={`/products/`} >
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mx-auto   ">
                     {randomProducts.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} onClick={() => { }} />
                     ))}
                 </div>
             </Link>
