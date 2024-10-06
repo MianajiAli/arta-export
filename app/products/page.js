@@ -59,13 +59,13 @@ export default function Page() {
                                                 {subcategory.products.length === 0 ? (
                                                     <div>No products available</div>
                                                 ) : (
-                                                    <div dir="rtl" className="relative">
+                                                    <div className="relative">
                                                         {/* Carousel Wrapper */}
-                                                        <div className="flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory touch-pan-x space-x-5 py-4 px-2">
+                                                        <div className="flex flex-row-reverse overflow-x-scroll space-x-5 py-4 px-2 ">
                                                             {subcategory.products.map((product) => (
                                                                 <div
                                                                     key={product.id}
-                                                                    className="snap-start flex-shrink-0 w-72 md:w-64 h-auto"
+                                                                    className="snap-end flex-shrink-0 w-72 md:w-64 h-full"
                                                                 >
                                                                     <ProductCard product={product} onClick={handleCardClick} />
                                                                 </div>
