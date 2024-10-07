@@ -34,7 +34,7 @@ export default function GlobalReach() {
 
                 <div className="top-0   absolute scale-[150%] "> {/* Adjust size here */}
                     <WorldMap
-                        color="#bc5eff"
+                        color="#ba59ff"
                         backgroundColor="none"
                         styleFunction={getStyle}
                         size="responsive"  // Use responsive size

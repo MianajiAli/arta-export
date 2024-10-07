@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-    "/images/08.webp",
-    "/images/03.webp",
-    "/images/cargo-image3.png",
+    "/images/hero1.webp",
+    // "/images/08.webp",
+    // "/images/03.webp",
+    // "/images/cargo-image3.png",
 ];
 
 const Hero = () => {

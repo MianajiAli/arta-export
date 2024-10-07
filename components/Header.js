@@ -22,8 +22,8 @@ export default function Navbar() {
     const [textIndex, setTextIndex] = useState(0);
 
     const texts = [
-        "صادرات کالا به کشورهای همسایه",
-        "همکار ما باش"
+        "صادرات کالا به تمام نقاط جهان",
+        "برای مشاوره کلیک کنید"
     ];
 
     useEffect(() => {
@@ -39,18 +39,13 @@ export default function Navbar() {
     return (
         <header className="bg-gray-100 shadow-md fixed w-full z-20">
             {/* NotificationBar directly integrated */}
-            <div className="bg-primary text-white text-center py-2 text-xs sm:text-sm md:text-base lg:text-lg w-full">
-                <div className="flex justify-center items-center w-full">
-                    {texts[textIndex] === "همکار ما باش" && (
-                        <Link href="/contact">
-                            <button className="mr-4 bg-secondary text-white px-2 py-0 rounded-lg text-xs sm:text-sm md:text-base">
-                                کلیک کن
-                            </button>
-                        </Link>
-                    )}
-                    <span>{texts[textIndex]}</span>
+            <Link href="/contact">
+                <div className="bg-primary text-white text-center py-2 text-xs sm:text-sm md:text-base lg:text-lg w-full">
+                    <div className="flex justify-center items-center w-full">
+                        <span>{texts[textIndex]}</span>
+                    </div>
                 </div>
-            </div>
+            </Link>
             <nav className="w-10/12 mx-auto flex justify-between items-center p-4" dir="rtl">
                 <span className="text-4xl font-bold text-primary">آرتا اکسپورت</span>
 
