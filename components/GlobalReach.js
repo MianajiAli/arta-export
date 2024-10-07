@@ -9,7 +9,7 @@ export default function GlobalReach() {
         maxValue,
         color,
     }) => ({
-        fill: countryCode === "IR" ? "orange" : color,
+        fill: countryCode === "IR" ? "#9500ff" : color,
         fillOpacity: countryValue ? 0.8 : 0.1,
         stroke: "black",
         strokeWidth: .6,
@@ -34,7 +34,7 @@ export default function GlobalReach() {
 
                 <div className="top-0   absolute scale-[150%] "> {/* Adjust size here */}
                     <WorldMap
-                        color="#FFD580"
+                        color="#bc5eff"
                         backgroundColor="none"
                         styleFunction={getStyle}
                         size="responsive"  // Use responsive size
