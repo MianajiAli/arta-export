@@ -27,6 +27,10 @@ export default function GlobalReach() {
         { country: "JP", value: "Japan sources Iranian oil and gas as part of its energy needs." },
         { country: "IR", value: "Includes various other countries with smaller shares of Iranian exports." } // For Iran itself
     ];
+    const getHref = ({ countryName }) => ({
+        href: `https://en.wikipedia.org/wiki/${encodeURIComponent(countryName)}`,
+        target: "_blank",
+    });
 
     return (
         <div className="relative w-full h-[400px] z-2  overflow-hidden ">
@@ -42,6 +46,7 @@ export default function GlobalReach() {
                         tooltipTextColor="none"
                         tooltipBgColor="none"
                         borderColor="#fff"
+                        hrefFunction={getHref}
                     />
                 </div>
             </div>
