@@ -184,6 +184,15 @@
             "/images/products/medical/pressure-device/1_1.jpg",
             "/images/products/medical/pressure-device/1_2.jpg"
           ]
+        },
+        {
+          "id": 401,
+          "name": "دستگاه فشار خون",
+          "description": "دستگاهی برای اندازه‌گیری فشار خون.",
+          "images": [
+            "/images/products/medical/pressure-device/1_1.jpg",
+            "/images/products/medical/pressure-device/1_2.jpg"
+          ]
         }
       ]
     },
@@ -220,29 +229,6 @@
               "images": [
                 "/images/products/kitchen/thermos/1_1.jpg",
                 "/images/products/kitchen/thermos/1_2.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "تجهیرات برقی",
-      "description": "Electrical equipment.",
-      "subcategories": [
-        {
-          "id": 5.1,
-          "name": "سیم و برق",
-          "description": "Wires and electrical components.",
-          "products": [
-            {
-              "id": 601,
-              "name": "سیم برق",
-              "description": "سیم برق با کیفیت بالا.",
-              "images": [
-                "/images/products/electrical/wire/1_1.jpg",
-                "/images/products/electrical/wire/1_2.jpg"
               ]
             }
           ]

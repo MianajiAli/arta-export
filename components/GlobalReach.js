@@ -28,7 +28,6 @@ export default function GlobalReach() {
         { country: "IR", value: "Includes various other countries with smaller shares of Iranian exports." } // For Iran itself
     ];
     const getHref = ({ countryName }) => ({
-        href: `https://en.wikipedia.org/wiki/${encodeURIComponent(countryName)}`,
         target: "_blank",
     });
 

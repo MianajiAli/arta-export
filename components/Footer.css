@@ -6,7 +6,7 @@
 }
 
 .footer-link:hover {
-    @apply text-text1;
+    @apply text-white;
     /* Replace with your desired hover color */
     text-decoration: underline;
     /* Optional: underline on hover */

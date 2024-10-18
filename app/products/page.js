@@ -78,7 +78,7 @@ export default function Page() {
                                         </div>
                                     ))
                                 ) : (
-                                    <div>No subcategories available</div>
+                                    <div></div>
                                 )}
                             </div>
                         ))

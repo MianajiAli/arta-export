@@ -42,7 +42,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-3xl transform transition-transform hover:scale-105 hover:shadow-2xl">
       <h2 className="text-3xl font-extrabold mb-6 text-center text-gray-900">تماس با ما</h2>
       {submitSuccess && <div className="mb-4 p-3 bg-green-500 text-white rounded-lg shadow-sm">{submitSuccess}</div>}
-      {submitError && <div className="mb-4 p-3 bg-red-500 text-white rounded-lg shadow-sm">{submitError}</div>}
+      {submitError && <div className="mb-4 p-3 bg-primary text-white rounded-lg shadow-sm">{submitError}</div>}
       <div className="mb-6">
         <label htmlFor="name" className="block text-lg font-medium text-gray-700">نام</label>
         <input
@@ -52,7 +52,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="mt-2 w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-orange-300 focus:border-transparent text-gray-800 bg-gray-50 transition-colors duration-300"
+          className="mt-2 w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent text-gray-800 bg-gray-50 transition-colors duration-300"
           placeholder="نام شما"
         />
       </div>
@@ -65,7 +65,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="mt-2 w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-orange-300 focus:border-transparent text-gray-800 bg-gray-50 transition-colors duration-300"
+          className="mt-2 w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent text-gray-800 bg-gray-50 transition-colors duration-300"
           placeholder="ایمیل شما"
         />
       </div>
@@ -78,7 +78,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows="4"
-          className="mt-2 w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-orange-300 focus:border-transparent text-gray-800 bg-gray-50 transition-colors duration-300"
+          className="mt-2 w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-purple-400 focus:border-transparent text-gray-800 bg-gray-50 transition-colors duration-300"
           placeholder="پیام شما"
         />
       </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full max-w-xs py-3 px-8 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-lg shadow-lg hover:from-orange-600 hover:to-orange-500 focus:outline-none focus:ring-4 focus:ring-orange-300 transition-transform transform hover:scale-105 duration-300"
+          className="w-full max-w-xs py-3 px-8 bg-gradient-to-r from-primary to-primary text-white font-bold rounded-lg shadow-lg hover:from-purple-600 hover:to-purple-500 focus:outline-none focus:ring-4 focus:ring-purple-300 transition-transform transform hover:scale-105 duration-300"
         >
           {isSubmitting ? 'در حال ارسال...' : 'ارسال پیام'}
         </button>

@@ -11,7 +11,7 @@ const ProductCard = ({ product, onClick }) => {
 
     return (
         <div
-            className="w-full md:w-60 min-h-80 text-text2 rounded-xl cursor-pointer shadow-lg p-3 border border-text1/10 mx-auto "
+            className="w-full bg-purple-600 md:w-60 min-h-80 text-text2 rounded-xl cursor-pointer shadow-lg p-3 border border-text1/10 mx-auto "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => onClick(product)}
@@ -29,9 +29,9 @@ const ProductCard = ({ product, onClick }) => {
                     onError={() => setImageError(true)}
                 />
             </div>
-            <div className="text-text1/90 py-3" dir="rtl">
+            <div className="text-white/90 py-3" dir="rtl">
                 <span className="text-xl font-bold">{product.name}</span>
-                <p className="text-sm mt-1 text-text2">{product.description}</p>
+                <p className="text-sm mt-1 text-white">{product.description}</p>
             </div>
         </div>
     );
