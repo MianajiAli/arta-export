@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 8080",
-    "nohup": "nohup start -p 8080 &",
+    "start": "next start -p 80",
+    "nohup": "nohup start -p 80 &",
     "lint": "next lint"
   },
   "dependencies": {
