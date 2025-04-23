@@ -1,12 +1,9 @@
-Sure! Here's a `README.md` template for your **Arta Export** project, assuming it's a Next.js app:
-
----
 
 # Arta Export - Official Website
 
 **Arta Export** is the official website for an export company, built using Next.js. It provides a platform to showcase products, company details, and offers easy contact options for international clients interested in exploring export opportunities.
 
----
+
 
 ## 🚀 Getting Started
 
