@@ -1,9 +1,10 @@
 
+
 # Arta Export - Official Website
 
 **Arta Export** is the official website for an export company, built using Next.js. It provides a platform to showcase products, company details, and offers easy contact options for international clients interested in exploring export opportunities.
 
-
+---
 
 ## 🚀 Getting Started
 
@@ -33,6 +34,36 @@ Make sure you have the following installed:
 
    ```bash
    npm install
+   ```
+
+4. Install Tailwind CSS and its required dependencies:
+
+   ```bash
+   npm install tailwindcss postcss autoprefixer
+   npx tailwindcss init
+   ```
+
+5. Configure Tailwind by adding the following to your `tailwind.config.js`:
+
+   ```js
+   module.exports = {
+     content: [
+       "./pages/**/*.{js,ts,jsx,tsx}",
+       "./components/**/*.{js,ts,jsx,tsx}",
+     ],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   };
+   ```
+
+6. In the `styles/globals.css`, add the following imports to enable Tailwind:
+
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
    ```
 
 ### Running the App
@@ -67,7 +98,7 @@ Visit `http://localhost:3000` in your browser to view the website locally.
 └── next.config.js        # Configuration for Next.js
 ```
 
----
+
 
 ## ⚙️ Configuration
 
@@ -94,23 +125,25 @@ NEXT_PUBLIC_API_URL=https://api.example.com
 
 - **Next.js**: React framework for building fast, scalable web apps.
 - **React**: JavaScript library for building user interfaces.
-- **CSS Modules** or **Tailwind CSS**: For styling components and layout.
-- **Vercel**: For deployment (or your preferred hosting service).
+- **Tailwind CSS**: Utility-first CSS framework for custom styling.
+- **@fortawesome/fontawesome-free**: For adding icons to the project.
+- **React Icons**: For using scalable vector icons in the app.
+- **Swiper**: A powerful library for creating touch sliders and carousels.
 
+### Dependencies in `package.json`:
 
-## 🚢 Deployment
-
-### Vercel Deployment
-
-To deploy the app on Vercel (or any other hosting platform), follow these steps:
-
-1. Push your repository to GitHub.
-2. Sign up/login to [Vercel](https://vercel.com/).
-3. Connect your GitHub repository to Vercel and follow the prompts.
-4. Once deployed, Vercel will automatically handle continuous deployments for any changes pushed to your repository.
-
-
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```json
+"dependencies": {
+  "@fortawesome/fontawesome-free": "^6.6.0",
+  "next": "14.2.6",
+  "react": "^18",
+  "react-dom": "^18",
+  "react-icons": "^5.3.0",
+  "react-svg-worldmap": "^2.0.0-alpha.16",
+  "react-tooltip": "^5.28.0",
+  "swiper": "^11.1.12",
+  "tailwindcss": "^3.0.0",
+  "postcss": "^8.4.10",
+  "autoprefixer": "^10.4.0"
+}
+```
